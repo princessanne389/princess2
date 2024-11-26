@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HGBaquiran College</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Light background color */
+            color: #333; /* Dark text color */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #37368b; 
+            padding: 10px 20px;
+            color: white;
+            
+        }
+        img{
+            width: 50px;
+            height: 50px;
+        }
+        
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .navbar nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar nav ul li {
+            margin: 0 15px;
+        }
+
+        .navbar nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu-icon {
+            display: none; /* Hide menu icon by default */
+        }
+
+        .container1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .course-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .course-card {
+            background-color: white; /* White background for course cards */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        .course-card:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+
+        .course-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .hamburger-menu {
+            display: none; /* Hide hamburger menu by default */
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #4CAF50; /* Green background for hamburger menu */
+            width: 250px;
+            height: 100%;
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hamburger-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hamburger-menu ul li {
+            margin: 15px 0;
+        }
+
+        .hamburger-menu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .close-btn {
+            background-color: #f44336; /* Red background for close button */
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar nav ul {
+                display: none; /* Hide the regular menu on small screens */
+            }
+            .menu-icon {
+                display: block; /* Show menu icon */
+            }
+            .hamburger-menu {
+                display: block; /* Show hamburger menu when activated */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="Picture/hgb logo.jpg" class="image" alt="HGBaquiran College Logo">
+            <h1>HGBaquiran College</h1>
+            <nav>
+                <ul>
+                    <li><a href="Main.html">HOME</a></li>
+                    <li><a href="AboutUs.html">ABOUT</a></li>
+                    <li><a href="Course.html">COURSES</a></li>
+                    <li><a href="Contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <img src="Picture/menu.png" alt="Menu Icon">
+            </div>
+        </div><br><br>
+        <div class="container1">
+            <h2>Our <span>Courses</span></h2>
+            <div class="course-gallery">
+                <div class="course-card">
+                    <img src="Picture/CRIM.jpeg" alt="Bachelor of Science in Criminology">
+                    <h3>Bachelor of Science in Criminology</h3>
+                    <p>Explore the intricacies of crime, justice, and law enforcement with our comprehensive Criminology program.</p>
+                </div>
+                <div class="course-card">
+                    <img src="Picture/HM.jpeg" alt="Bachelor of Science in Hospitality Management">
+                    <h3>Bachelor of Science in Hospitality Management</h3>
+                    <p>Develop your skills in the dynamic hospitality industry and learn to create exceptional guest experiences.</p>
+                </div>
+                <div class="course-card">
+                    <img src="Picture/IT.jpeg" alt="Bachelor of Science in Information Technology">
+                    <h3>Bachelor of Science in Information Technology</h3>
+                    <p>Gain the knowledge and skills to excel in the ever-evolving world of technology.</p>
+                </div>
+                <div class="course-card">
+                    <img src="Picture/BA.jpeg" alt="Bachelor of Science in Business Administration">
+                    <h3>Bachelor of Science in Business Administration</h3>
+                    <p>Master the fundamentals of business management and equip yourself for success in the corporate world.</p>
+                </div>
+                <div class="course-card">
+                    <img src="Picture/Educ.jpeg" alt="Bachelor of Science in Education">
+                    <h3>Bachelor of Science in Education</h3>
+                    <p>Prepare yourself to become a dedicated and inspiring educator, shaping the minds of future generations.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <ul>
+                <li><a href="Main.html">HOME</a></li>
+                <li><a href="AboutUs.html">ABOUT</a></li>
+                <li><a href="Course.html">COURSES</a></li>
+                <li><a href="Contact.html">CONTACT</a></li> 
+            </ul>
+            <button class="close-btn" onclick="toggleMenu()">EXIT</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('hamburgerMenu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

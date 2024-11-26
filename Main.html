@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HGBaquiran College</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #332792; 
+            color: #f5efef; /* Dark text color */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #51526d; 
+            padding: 10px 20px;
+            color: rgb(245, 245, 250);
+        }
+
+        .navbar img {
+            height: 50px; /* Adjust logo height */
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .navbar nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar nav ul li {
+            margin: 0 15px;
+        }
+
+        .navbar nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu-icon {
+            display: none; /* Hide menu icon by default */
+        }
+
+        .container2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+       
+        .container2 h2 span {
+            color: #5e5eca; /* Highlight color for span */
+        }
+        .container2 button a {
+            color: rgb(65, 51, 116); /* White text for button links */
+            text-decoration: none; /* Remove underline */
+            background-color: #3e16f0;
+        }
+        .container2 button:hover {
+            background-color: #403675; 
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .flex-box {
+            background-color: rgb(80, 66, 129); /* White background for flex boxes */
+            border: 1px solid #9a90b4;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            flex: 1 1 30%; /* Flex-grow, flex-shrink, flex-basis */
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .flex-box:hover {
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+
+        .flex-box h4 {
+            color: #f0effc; 
+        }
+
+        .flex-box button {
+            background-color: #1e193b; 
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .flex-box button a {
+            color: rgb(236, 234, 245); /* White text for button links */
+            text-decoration: none; /* Remove underline */
+            background-color: #614cd4;
+        }
+
+        .flex-box button:hover {
+            background-color: #2f285a; 
+        }
+
+        .hamburger-menu {
+            display: none; /* Hide hamburger menu by default */
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #4CAF50; /* Green background for hamburger menu */
+            width: 250px;
+            height: 100%;
+            padding: 20px;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .hamburger-menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hamburger-menu ul li {
+            margin: 15px 0;
+        }
+
+        .hamburger-menu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .close-btn {
+            background-color: #f44336; /* Red background for close button */
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .navbar nav ul {
+                display: none; /* Hide the regular menu on small screens */
+            }
+            .menu-icon {
+                display: block; /* Show menu icon */
+            }
+            .hamburger-menu {
+                display: block; /* Show hamburger menu when activated */
+            }
+            .flex-container {
+                flex-direction: column; /* Stack flex boxes vertically on small screens */
+                align-items: center; /* Center align items */
+            }
+            .flex-box {
+                width: 90%; /* Full width for flex boxes */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="Picture/hgb logo.jpg" class="image">
+            <h1>HGBaquiran College</h1>
+            <nav>
+                <ul>
+                    <li><a href="Main.html">HOME</a></li>
+                    <li><a href="AboutUs.html">ABOUT</a></li>
+                    <li><a href="Course.html">COURSES</a></li>
+                    <li><a href="Contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <img src="Picture/Menu.png" alt="Menu Icon">
+            </div>
+        </div><br><br>
+        <div class="container2">
+            <h2>Welcome to <span>HGBaquiran College</span></h2><br>
+            <h3> "The road to success is paved with good intentions, your success, then, begins with HGBaquiran College."</h3><br>
+            <a href="Admission.html"><button>Enroll Now!</button></a>
+        </div>
+        <div class="flex-container">
+            <div class="flex-box">
+                <h4>Courses</h4>
+                <h5>Information Technology</h5>
+                <button><a href="https://hgbaquirancollege.org/undergraduatePrograms.php">Learn More!</a></button>
+            </div>
+            <div class="flex-box">
+                <h4>About Us</h4>
+                <h5>Develop competitive Individuals</h5>
+                <button><a href="AboutUs.html">Learn More!</a></button>
+            </div>
+            <div class="flex-box">
+                <h4>Contact Us</h4>
+                <h5>Must call me Yours!!</h5>
+                <button><a href="Contact.html">Learn More!</a></button>
+            </div>
+        </div>
+
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <ul>
+                <li><a href="Main.html">HOME</a></li>
+                <li><a href="AboutUs.html">ABOUT</a></li>
+                <li><a href="Course.html">COURSES</a></li>
+                <li><a href="Contact.html">CONTACT</a></li>
+            </ul>
+            <button class="close-btn" onclick="toggleMenu()">EXIT</button>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('hamburgerMenu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>

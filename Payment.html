@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Picture/hgb logo.jpg" type="image/x-icon">
+    <title>Application Fee</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(Picture/background.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 90%;
+    max-width: 400px; 
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5em; 
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1em; 
+}
+
+.payment-method {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    font-size: 0.9em; 
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em; 
+    width: 125px; 
+}
+.back-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    width: 125PX; 
+    background-color: #3836cc;
+}
+
+.submit-button {
+    background-color: rgb(167, 158, 190);
+    color: black;
+}
+h2{
+    font-size: larger;
+    text-align: left;
+}
+
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.2em; 
+    }
+
+    p {
+        font-size: 0.9em; 
+    }
+
+    .back-button, .submit-button {
+        font-size: 0.8em; 
+    }
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Application Fee</h1>
+        <p>Payment is due 3 days prior to the start of the class</p><br>
+        <form>
+            <h2>Payment Method</h2>
+            <div class="payment-method">
+                
+                <label>
+                    <input type="radio" name="payment" value="credit-card"> Credit Card
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="mail-check"> Mail a Check
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="in-person"> In-person at school
+                </label>
+            </div>
+            <div class="buttons">
+                <a href="Education.html">
+                    <button type="button" class="back-button">Back</button>
+                </a>
+                <button type="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
